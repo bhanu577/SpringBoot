@@ -1,6 +1,16 @@
 package com.code.springdemo;
 
 public class CricketCoach implements Coach {
+	 
+	private FortuneService fortuneService;
+	
+	public CricketCoach() {
+		System.out.println("I am inside Cricket Coach class");
+	}
+	public void setFortuneService(FortuneService fortuneService) {
+		System.out.println("I am inside Cricket Coach class of setter method");
+		this.fortuneService = fortuneService;
+	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -9,8 +19,6 @@ public class CricketCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		return fortuneService.getFortuneService();
 	}
-
 }

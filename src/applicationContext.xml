@@ -23,8 +23,3 @@
     <property name="fortuneService" ref="myFortune"/>
     </bean>
 </beans>
-
-
-
-
-

@@ -25,4 +25,10 @@
     <property name="emailAddress" value="${foo.email}"></property>
     <property name="team" value="${foo.team}"></property>
     </bean>
+    
+    <bean id="randomFortune" class="com.code.springdemo.RandomFortuneService"></bean>
+    
+    <bean id="myRandomCoach" class="com.code.springdemo.RandomCoach">
+    <constructor-arg ref="randomFortune"/>
+    </bean>
 </beans>
